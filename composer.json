@@ -1,0 +1,33 @@
+{
+    "name": "root/job-finder",
+    "description": "A website for Companies and People who are looking for employees and People looking for employment",
+    "type": "project",
+    "license": "ISC",
+    "authors": [
+        {
+            "name": "Nixon Kosgei",
+            "email": "nkosgey6@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.8",
+        "slim/twig-view": "^2.2",
+        "robmorgan/phinx": "^0.8.1",
+        "slim/pdo": "^1.10",
+        "slim/flash": "^0.4.0",
+        "respect/validation": "^1.1",
+        "phpmailer/phpmailer": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\" : "App"
+        }
+    },
+    "config": {
+        "process-timeout": 0
+    },
+    "scripts": {
+        "start": "cd public && echo 'App running on http://localhost:8080' && php -S localhost:8080",
+        "migrate": "vendor\\bin\\phinx migrate"
+    }
+}
